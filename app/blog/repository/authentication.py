@@ -1,7 +1,7 @@
-from .. import models, token
+from blog import models, token
 from sqlalchemy.orm import Session
 from fastapi import HTTPException,status, Depends
-from ..hashing import Hash
+from blog.hashing import Hash
 from datetime import timedelta
 from fastapi.security import OAuth2PasswordRequestForm
 

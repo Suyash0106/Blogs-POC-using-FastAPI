@@ -1,9 +1,8 @@
 from fastapi import APIRouter, Depends, status, HTTPException
-from sqlalchemy.orm import Session, session
+from sqlalchemy.orm import Session
 from typing import List
-from .. import schemas, models, database, oauth2
-from fastapi.security import OAuth2PasswordBearer
-from ..repository import blog
+from blog import schemas, database, oauth2
+from blog.repository import blog
 
 
 router = APIRouter(prefix = '/blog', tags=['Blogs'])
